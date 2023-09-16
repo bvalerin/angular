@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
-import { v4 as uuid } from 'uuid';
 
 
 
@@ -25,7 +24,7 @@ export class AddCharacterComponent {
 
 
   public character: Character = {
-    id: uuid(),
+    id: self.crypto.randomUUID(),
     name: this.getRandomName(),
     power: Math.random() * 50
   };
@@ -35,7 +34,7 @@ export class AddCharacterComponent {
     this.onNewCharacter.emit(this.character);
 
     this.character = {
-      id: uuid(),
+      id: self.crypto.randomUUID(),
       name: this.getRandomName(),
       power: Math.random() * 2
     };
