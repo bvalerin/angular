@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
-    "build": "ng build",
+    "build": "ng build --base-href ./ && rm -rf ../docs && mkdir ../docs && cp -r dist/bases/* ../docs",
+    "build:href": "",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
