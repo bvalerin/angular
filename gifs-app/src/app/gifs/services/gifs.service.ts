@@ -30,7 +30,7 @@ export class GifsService {
 
 
   public searchTag( tag : string ) : void {
-    if ( tag.trim().length === 0 ) return;
+    if ( tag && tag.trim().length === 0 ) return;
 
     this.organizeHistory( tag );
 
