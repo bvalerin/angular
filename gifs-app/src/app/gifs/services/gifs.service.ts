@@ -55,6 +55,8 @@ export class GifsService {
 
 
   private organizeHistory(tag : string) {
+    if ( !tag ) return;
+
     tag = tag.trim().toLocaleLowerCase();
 
     if ( this._searchHistory.includes( tag ) ) {
